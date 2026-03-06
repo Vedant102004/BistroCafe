@@ -5,19 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bistro Café | Premium Tropical Dining in Miami, FL</title>
   <meta name="description" content="Experience Miami's finest tropical luxury dining at Bistro Café. Rated 4.9 stars. Located at 1352 NE 1st Ave, Miami, FL 33132. Book your table today." />
-  <meta name="keywords" content="Bistro Café Miami, luxury restaurant Miami, tropical dining Miami, best restaurant Miami FL, fine dining downtown Miami" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://bistrocafe.miami/" />
-  <meta property="og:title" content="Bistro Café | Premium Tropical Dining in Miami" />
-  <meta property="og:description" content="4.9-star tropical luxury dining experience in the heart of Miami, FL." />
-  <meta property="og:type" content="restaurant" />
-  <meta property="og:url" content="https://bistrocafe.miami/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Restaurant","name":"Bistro Café","url":"https://bistrocafe.miami","telephone":"+1-305-555-0192","priceRange":"$$$","servesCuisine":["Mediterranean","Tropical","Contemporary American"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"348"},"address":{"@type":"PostalAddress","streetAddress":"1352 NE 1st Ave","addressLocality":"Miami","addressRegion":"FL","postalCode":"33132","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":25.7784,"longitude":-80.1886},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"11:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:00","closes":"23:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"21:00"}],"menu":"https://bistrocafe.miami/#menu","acceptsReservations":"True"}
-  </script>
   <style>
     :root {
       --sand:#F5F2EB; --sand-dark:#EDE8DC; --emerald:#08261C;
@@ -33,12 +23,10 @@
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
 
-    /* ── CURSOR ── */
     .cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease);mix-blend-mode:multiply}
     .cursor-ring{position:fixed;width:40px;height:40px;border:1.5px solid var(--gold);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .4s var(--ease),height .4s var(--ease),opacity .3s;opacity:.6}
     .cursor.hov{width:20px;height:20px}.cursor-ring.hov{width:60px;height:60px;opacity:.3}
 
-    /* ── PRELOADER ── */
     #preloader{position:fixed;inset:0;background:var(--emerald);z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
     .pre-logo{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--sand);letter-spacing:.12em;opacity:0;transform:translateY(30px);text-align:center;position:relative;z-index:2}
     .pre-logo span{color:var(--gold);font-style:italic}
@@ -64,7 +52,6 @@
     #preloader.out{animation:preOut .4s 1.5s var(--ease) forwards}
     @keyframes preOut{to{opacity:0;pointer-events:none}}
 
-    /* ── NAV ── */
     nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s var(--ease),padding .4s var(--ease)}
     nav.sc{background:rgba(8,38,28,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:1rem 4rem;box-shadow:0 4px 40px rgba(0,0,0,.25)}
     .nav-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--white);letter-spacing:.06em}
@@ -79,19 +66,10 @@
     .hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
     .hbg span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:transform .3s,opacity .3s}
 
-    /* ── HERO ── */
     #hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;justify-content:center;overflow:hidden}
     .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0a1f16,#08261C,#1a4a30);overflow:hidden}
     .hero-vid{width:100%;height:100%;object-fit:cover;opacity:.55}
     .hero-bg::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(26,92,64,.3),transparent 60%),radial-gradient(ellipse 60% 80% at 20% 70%,rgba(212,175,55,.05),transparent 50%)}
-    .orb{position:absolute;border-radius:50%;filter:blur(60px);animation:orbF 8s ease-in-out infinite;z-index:1}
-    .o1{width:600px;height:600px;background:radial-gradient(circle,rgba(26,92,64,.6),transparent);top:-100px;right:-100px}
-    .o2{width:400px;height:400px;background:radial-gradient(circle,rgba(212,175,55,.12),transparent);bottom:-50px;left:10%;animation-delay:-3s}
-    .o3{width:300px;height:300px;background:radial-gradient(circle,rgba(8,38,28,.8),transparent);top:30%;left:30%;animation-delay:-5s}
-    @keyframes orbF{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
-    .leaf{position:absolute;opacity:.06;pointer-events:none;z-index:1}
-    .l1{width:500px;top:-60px;right:5%;transform:rotate(-20deg)}
-    .l2{width:350px;bottom:0;left:-40px;transform:rotate(15deg) scaleX(-1)}
     .hero-ov{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(8,38,28,.5) 0%,rgba(8,38,28,.2) 40%,rgba(8,38,28,.7) 100%)}
     .hero-cnt{position:relative;z-index:3;text-align:center;max-width:800px;padding:0 2rem 7rem}
     .hero-ey{display:inline-flex;align-items:center;gap:.75rem;color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;margin-bottom:1.5rem;opacity:0;animation:slideUp .8s 2s var(--ease) forwards}
@@ -109,7 +87,6 @@
     .btn-s{display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:var(--white);font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:1rem 2.2rem;border-radius:50px;border:1px solid rgba(255,255,255,.5);cursor:pointer;transition:border-color .3s,background .3s,color .3s}
     .btn-s:hover{border-color:var(--gold);background:rgba(212,175,55,.1);color:var(--gold)}
 
-    /* SCROLL INDICATOR */
     .scrl{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.55rem;z-index:3;opacity:0;animation:slideUp .9s 3s var(--ease) forwards;cursor:pointer;text-decoration:none}
     .scrl-mouse{width:24px;height:38px;border:1.5px solid rgba(212,175,55,.8);border-radius:12px;display:flex;align-items:flex-start;justify-content:center;padding-top:6px;transition:border-color .3s}
     .scrl:hover .scrl-mouse{border-color:var(--gold)}
@@ -126,7 +103,6 @@
     .rate-txt{font-size:.75rem;line-height:1.4}
     .rate-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--gold)}
 
-    /* ── COMMON ── */
     section{padding:7rem 4rem}
     .sec-lbl{font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
     .sec-lbl::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
@@ -135,7 +111,6 @@
     .rev{opacity:0;transform:translateY(40px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
     .rev.vis{opacity:1;transform:translateY(0)}
 
-    /* ── ABOUT ── */
     #about{background:var(--emerald);padding:5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
     #about .sec-ttl{color:var(--white)}
     #about .sec-sub{color:rgba(245,242,235,.65);max-width:100%}
@@ -152,7 +127,6 @@
     .img-in::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,38,28,.35),transparent 60%);pointer-events:none}
     .img-box:hover img{transform:scale(1.05)}
 
-    /* ── MENU ── */
     #menu{background:var(--sand);padding:7rem 4rem}
     .mhdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:4rem;flex-wrap:wrap;gap:2rem}
     .mtabs{display:flex;background:var(--sand-dark);border-radius:50px;padding:5px}
@@ -175,7 +149,6 @@
     .cadd{width:38px;height:38px;border-radius:50%;background:var(--emerald);color:var(--gold);font-size:1.2rem;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;transition:background .3s,transform .2s}
     .cadd:hover{background:var(--gold);color:var(--emerald);transform:scale(1.1)}
 
-    /* ── EXPERIENCE ── */
     #experience{background:var(--emerald);padding:7rem 4rem;position:relative;overflow:hidden}
     #experience::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(212,175,55,.06),transparent 70%);border-radius:50%}
     .exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
@@ -194,7 +167,6 @@
     @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
     .exp-bdg span{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;display:block;animation:spin 20s linear infinite reverse}
 
-    /* ── TESTIMONIALS ── */
     #testimonials{background:var(--sand);padding:7rem 4rem}
     .t-hdr{text-align:center;margin-bottom:4rem}
     .t-hdr .sec-lbl{justify-content:center}.t-hdr .sec-lbl::before{display:none}
@@ -222,7 +194,6 @@
     .dot{width:6px;height:6px;border-radius:50%;background:rgba(8,38,28,.15);cursor:pointer;transition:all .3s}
     .dot.act{width:24px;border-radius:3px;background:var(--emerald)}
 
-    /* ── CONTACT ── */
     #contact{background:var(--emerald);padding:7rem 4rem}
     .con-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
     .con-l .sec-ttl{color:var(--white)}.con-l .sec-sub{color:rgba(245,242,235,.6);margin-bottom:2.5rem}
@@ -247,7 +218,6 @@
     .f-sub:hover{background:var(--emerald-light);transform:translateY(-2px);box-shadow:0 12px 40px rgba(8,38,28,.3)}
     .f-sub.ok{background:var(--gold);color:var(--emerald)}
 
-    /* ── FOOTER ── */
     footer{background:#030F09;padding:4rem 4rem 2rem}
     .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(212,175,55,.1)}
     .ft-brand .nav-logo{font-size:1.6rem;margin-bottom:1rem}
@@ -268,7 +238,6 @@
     .ft-links a{font-size:.72rem;color:rgba(245,242,235,.3);transition:color .3s}
     .ft-links a:hover{color:var(--gold)}
 
-    /* ── MOBILE NAV ── */
     .mob-nav{position:fixed;top:0;left:-100%;width:75%;max-width:300px;height:100vh;background:var(--emerald);z-index:999;padding:5rem 2rem 3rem;transition:left .4s var(--ease);display:none;flex-direction:column;gap:0;box-shadow:8px 0 40px rgba(0,0,0,.4)}
     .mob-nav.on{left:0}
     .mob-nav a{color:rgba(255,255,255,.85);font-size:1rem;font-weight:500;letter-spacing:.08em;padding:1rem 0;border-bottom:1px solid rgba(212,175,55,.1);display:block;transition:color .3s,padding-left .3s}
@@ -277,16 +246,13 @@
     .mob-ov.on{opacity:1;pointer-events:all}
     @media(max-width:900px){.mob-nav{display:flex}.mob-ov{display:block}}
 
-    /* ── SCROLL TOP ── */
     #stTop{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;background:var(--emerald);color:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer;z-index:900;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s,background .3s;border:1px solid rgba(212,175,55,.3);box-shadow:0 8px 30px rgba(8,38,28,.3)}
     #stTop.on{opacity:1;transform:translateY(0)}
     #stTop:hover{background:var(--emerald-light)}
 
-    /* ── TOAST ── */
     .toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--emerald);color:var(--white);padding:1rem 2rem;border-radius:50px;font-size:.85rem;font-weight:500;display:flex;align-items:center;z-index:9999;transition:transform .5s var(--ease),opacity .5s;border:1px solid rgba(212,175,55,.3);box-shadow:0 16px 50px rgba(8,38,28,.4);opacity:0;white-space:nowrap}
     .toast.on{transform:translateX(-50%) translateY(0);opacity:1}
 
-    /* ── RESPONSIVE ── */
     @media(max-width:1100px){.mgrid{grid-template-columns:repeat(2,1fr)}.ft-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:900px){
       section{padding:5rem 2rem} nav{padding:1.2rem 1.5rem} nav.sc{padding:.8rem 1.5rem}
@@ -354,13 +320,6 @@
         src="AI_Se_Image_Aur_Video_Banwayein.mp4">
       </video>
       <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
-      <svg class="leaf l1" viewBox="0 0 200 400" fill="rgba(255,255,255,1)" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100 0 C60 80,20 180,30 280 C35 330,60 370,100 400 C100 400,100 300,90 260 C130 200,160 140,100 0Z"/>
-        <path d="M100 400 L100 100" stroke="rgba(255,255,255,0.5)" stroke-width="3" fill="none"/>
-      </svg>
-      <svg class="leaf l2" viewBox="0 0 200 400" fill="rgba(255,255,255,1)" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100 0 C60 80,20 180,30 280 C35 330,60 370,100 400 C100 400,100 300,90 260 C130 200,160 140,100 0Z"/>
-      </svg>
     </div>
     <div class="hero-ov" aria-hidden="true"></div>
     <div class="hero-cnt">
@@ -377,13 +336,6 @@
       <div class="scrl-arrows"><div class="arr"></div><div class="arr"></div><div class="arr"></div></div>
       <span class="scrl-lbl">Scroll</span>
     </a>
-    <div class="hero-rate" aria-label="4.9 stars, 348 reviews">
-      <div><div class="rate-num">4.9</div><div class="stars">★★★★★</div></div>
-      <div class="rate-txt">
-        <div style="color:rgba(255,255,255,.5);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;">Rated</div>
-        <div style="color:rgba(255,255,255,.7);font-size:.78rem;">348 Reviews</div>
-      </div>
-    </div>
   </section>
 
   <section id="about" aria-labelledby="aTitle">
@@ -399,9 +351,9 @@
     </div>
     <div class="about-right rev" style="transition-delay:.2s;">
       <div class="img-grid">
-        <div class="img-box"><div class="img-in"><img src="Gemini_Generated_Image_4sw9uy4sw9uy4sw9.jpg" alt="Signature Plate" loading="lazy"></div></div>
-        <div class="img-box"><div class="img-in"><img src="_622efe81-21b0-4594-8fa1-ec0fb73de63a.jpg" alt="The Bar" loading="lazy"></div></div>
-        <div class="img-box"><div class="img-in"><img src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cb?q=80&w=800&auto=format&fit=crop" alt="Interior" loading="lazy"></div></div>
+        <div class="img-box"><div class="img-in"><img src="ceviche.jpg" alt="Signature Plate" loading="lazy"></div></div>
+        <div class="img-box"><div class="img-in"><img src="bar.jpg" alt="The Bar" loading="lazy"></div></div>
+        <div class="img-box"><div class="img-in"><img src="snapper.jpg" alt="Interior" loading="lazy"></div></div>
       </div>
     </div>
   </section>
@@ -421,27 +373,27 @@
     </div>
     <div class="mgrid" id="mgrid">
       <article class="mcard" data-cat="starters" tabindex="0">
-        <div class="c-img"><span class="cbadge">Chef's Pick</span><div class="c-img-in"><img src="Gemini_Generated_Image_4sw9uy4sw9uy4sw9.jpg" alt="Mango Ceviche" loading="lazy"></div></div>
+        <div class="c-img"><span class="cbadge">Chef's Pick</span><div class="c-img-in"><img src="ceviche.jpg" alt="Mango Ceviche" loading="lazy"></div></div>
         <div class="cbody"><div class="ccat">Starters</div><h3 class="cttl">Tropical Mango Ceviche</h3><p class="cdesc">Fresh local snapper, Ataulfo mango, coconut leche de tigre, micro cilantro, toasted plantain chips.</p><div class="cfoot"><span class="cprice">$22</span><button class="cadd" onclick="addOrder(this)">+</button></div></div>
       </article>
       <article class="mcard" data-cat="mains" tabindex="0">
-        <div class="c-img"><span class="cbadge">Most Loved</span><div class="c-img-in"><img src="_6d10d525-bcd6-4e7b-8424-54663c3e44fc.jpg" alt="Wagyu Short Rib" loading="lazy"></div></div>
+        <div class="c-img"><span class="cbadge">Most Loved</span><div class="c-img-in"><img src="wagyu.jpg" alt="Wagyu Short Rib" loading="lazy"></div></div>
         <div class="cbody"><div class="ccat">Mains</div><h3 class="cttl">Wagyu Short Rib</h3><p class="cdesc">48-hr braised Wagyu, truffle jus, compressed watermelon, jalapeño chimichurri, crispy shallots.</p><div class="cfoot"><span class="cprice">$58</span><button class="cadd" onclick="addOrder(this)">+</button></div></div>
       </article>
       <article class="mcard" data-cat="mains" tabindex="0">
-        <div class="c-img"><div class="c-img-in"><img src="_deb9f354-9930-4dbe-856d-5c66b9cbfc6e.jpg" alt="Florida Snapper" loading="lazy"></div></div>
+        <div class="c-img"><div class="c-img-in"><img src="snapper.jpg" alt="Florida Snapper" loading="lazy"></div></div>
         <div class="cbody"><div class="ccat">Mains</div><h3 class="cttl">Seared Florida Snapper</h3><p class="cdesc">Day-boat snapper, saffron beurre blanc, grilled broccolini, hearts of palm salsa, lemon zest foam.</p><div class="cfoot"><span class="cprice">$46</span><button class="cadd" onclick="addOrder(this)">+</button></div></div>
       </article>
       <article class="mcard" data-cat="starters" tabindex="0">
-        <div class="c-img"><span class="cbadge">New</span><div class="c-img-in"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800&auto=format&fit=crop" alt="Shrimp Toast" loading="lazy"></div></div>
+        <div class="c-img"><span class="cbadge">New</span><div class="c-img-in"><img src="ceviche.jpg" alt="Shrimp Toast" loading="lazy"></div></div>
         <div class="cbody"><div class="ccat">Starters</div><h3 class="cttl">Gulf Shrimp Toast</h3><p class="cdesc">Toasted brioche, whipped avocado, Gulf shrimp, spiced tomato consommé, crispy capers, micro greens.</p><div class="cfoot"><span class="cprice">$18</span><button class="cadd" onclick="addOrder(this)">+</button></div></div>
       </article>
       <article class="mcard" data-cat="desserts" tabindex="0">
-        <div class="c-img"><span class="cbadge">Signature</span><div class="c-img-in"><img src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?q=80&w=800&auto=format&fit=crop" alt="Crème Brûlée" loading="lazy"></div></div>
+        <div class="c-img"><span class="cbadge">Signature</span><div class="c-img-in"><img src="bar.jpg" alt="Crème Brûlée" loading="lazy"></div></div>
         <div class="cbody"><div class="ccat">Desserts</div><h3 class="cttl">Guava Crème Brûlée</h3><p class="cdesc">Silky guava custard, caramelized Turbinado crust, passion fruit coulis, coconut tuile, gold leaf.</p><div class="cfoot"><span class="cprice">$16</span><button class="cadd" onclick="addOrder(this)">+</button></div></div>
       </article>
       <article class="mcard" data-cat="desserts" tabindex="0">
-        <div class="c-img"><div class="c-img-in"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop" alt="Chocolate Lava" loading="lazy"></div></div>
+        <div class="c-img"><div class="c-img-in"><img src="wagyu.jpg" alt="Chocolate Lava" loading="lazy"></div></div>
         <div class="cbody"><div class="ccat">Desserts</div><h3 class="cttl">Dark Chocolate Lava</h3><p class="cdesc">Valrhona 72% chocolate, espresso caramel core, hazelnut praline, vanilla bean ice cream, sea salt.</p><div class="cfoot"><span class="cprice">$14</span><button class="cadd" onclick="addOrder(this)">+</button></div></div>
       </article>
     </div>
@@ -456,12 +408,11 @@
         <div class="exp-feats">
           <div class="exp-feat"><div class="exp-ico">🌿</div><div class="exp-txt"><h4>Farm-to-Table Philosophy</h4><p>Partnered with 12 local Florida farms for ingredients harvested within 24 hours of service.</p></div></div>
           <div class="exp-feat"><div class="exp-ico">🍷</div><div class="exp-txt"><h4>Curated Wine Cellar</h4><p>Over 300 labels hand-selected by our Sommelier, with perfect pairings for every dish.</p></div></div>
-          <div class="exp-feat"><div class="exp-ico">🎶</div><div class="exp-txt"><h4>Live Music Thu–Sat</h4><p>Jazz, bossa nova, and contemporary sets by Miami's finest resident musicians.</p></div></div>
         </div>
       </div>
       <div class="rev" style="transition-delay:.2s;">
         <div class="exp-vis">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop" alt="Bistro Café atmosphere" loading="lazy">
+          <img src="bar.jpg" alt="Bistro Café atmosphere" loading="lazy">
           <div class="exp-bdg"><span>4.9</span>Star<br>Rating</div>
           <div class="exp-tag">
             <span style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:rgba(245,242,235,.75);">BISTRO CAFÉ</span>
@@ -484,16 +435,9 @@
     <div class="car-wrap rev">
       <div class="car-track" id="carTrack">
         <article class="t-card"><div class="t-stars">★★★★★</div><p class="t-txt">"The Wagyu Short Rib was unlike anything I've experienced in Miami. The presentation was art, the flavors were poetry. Bistro Café has permanently ruined all other restaurants for me."</p><div class="t-aut"><div class="t-av av1">👩‍💼</div><div><div class="t-nm">Isabella Reyes</div><div class="t-lc">Brickell, Miami</div></div></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><p class="t-txt">"Celebrated our 10th anniversary here. The staff remembered our names, the table had fresh flowers, and the tasting menu was extraordinary. This is what hospitality truly means."</p><div class="t-aut"><div class="t-av av2">👨‍💼</div><div><div class="t-nm">Marcus & Elena Chen</div><div class="t-lc">Coconut Grove, Miami</div></div></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><p class="t-txt">"I've dined in Paris, Tokyo, New York — and the Guava Crème Brûlée here has no equal. Chef's instinct for tropical flavors is genuinely world-class. Worth every penny."</p><div class="t-aut"><div class="t-av av3">👩‍🍳</div><div><div class="t-nm">Sophia Laurent</div><div class="t-lc">Coral Gables, Miami</div></div></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><p class="t-txt">"The outdoor terrace at sunset, the sound of jazz drifting through the palms, and that Mango Ceviche — I've found my forever spot in Miami. Perfection, quite simply."</p><div class="t-aut"><div class="t-av av4">👨‍🎨</div><div><div class="t-nm">David Ortega</div><div class="t-lc">Wynwood, Miami</div></div></div></article>
-        <article class="t-card"><div class="t-stars">★★★★★</div><p class="t-txt">"Flew in from NYC specifically because a friend insisted. The sommelier's wine pairing was inspired — each pour elevated the dish in a completely new direction. Exceptional all around."</p><div class="t-aut"><div class="t-av av5">👩‍🔬</div><div><div class="t-nm">Amanda Foster</div><div class="t-lc">New York, NY</div></div></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><p class="t-txt">"Celebrated our 10th anniversary here. The staff remembered our names, the table had fresh flowers, and the tasting menu was extraordinary."</p><div class="t-aut"><div class="t-av av2">👨‍💼</div><div><div class="t-nm">Marcus & Elena Chen</div><div class="t-lc">Coconut Grove, Miami</div></div></div></article>
+        <article class="t-card"><div class="t-stars">★★★★★</div><p class="t-txt">"I've dined in Paris, Tokyo, New York — and the Guava Crème Brûlée here has no equal. Chef's instinct for tropical flavors is genuinely world-class."</p><div class="t-aut"><div class="t-av av3">👩‍🍳</div><div><div class="t-nm">Sophia Laurent</div><div class="t-lc">Coral Gables, Miami</div></div></div></article>
       </div>
-    </div>
-    <div class="car-ctrl">
-      <button class="car-btn" onclick="slideCar(-1)" aria-label="Previous">←</button>
-      <div class="car-dots" id="carDots" role="tablist"></div>
-      <button class="car-btn" onclick="slideCar(1)" aria-label="Next">→</button>
     </div>
   </section>
 
@@ -509,12 +453,7 @@
           <div class="con-item"><div class="c-ico">🕐</div><div><div class="c-lbl">Hours</div><div class="c-val">Mon–Thu 11am–10pm · Fri–Sat 11am–11:30pm · Sun 10am–9pm</div></div></div>
         </div>
         <div class="map-box">
-         <iframe 
-  src="https://maps.google.com/maps?q=1352%20NE%201st%20Ave,%20Miami,%20FL%2033132&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-  title="Bistro Café Map" 
-  allowfullscreen 
-  loading="lazy">
-</iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.571439971939!2d-80.1912952849767!3d25.78486948362615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69fcbd564dd%3A0x28b8d58097373705!2sBistro%20Cafe!5e0!3m2!1sen!2sin!4v1709841234567!5m2!1sen!2sin" title="Bistro Café Map" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
       <div class="rev" style="transition-delay:.2s;">
@@ -531,13 +470,8 @@
           </div>
           <div class="f-row">
             <div class="f-grp"><label for="dt">Date</label><input type="date" id="dt"/></div>
-            <div class="f-grp"><label for="tm">Time</label><select id="tm"><option value="">Select time</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select></div>
+            <div class="f-grp"><label for="tm">Time</label><select id="tm"><option value="">Select time</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option></select></div>
           </div>
-          <div class="f-row">
-            <div class="f-grp"><label for="gs">Guests</label><select id="gs"><option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5–6 Guests</option><option>7+ Guests (call us)</option></select></div>
-            <div class="f-grp"><label for="oc">Occasion</label><select id="oc"><option value="">Optional</option><option>Birthday</option><option>Anniversary</option><option>Business Dinner</option><option>Date Night</option><option>Just Dinner</option></select></div>
-          </div>
-          <div class="f-grp"><label for="nt">Special Requests</label><textarea id="nt" placeholder="Dietary restrictions, allergies, special arrangements..."></textarea></div>
           <button class="f-sub" id="fSub" onclick="submitForm(event)">✦ Request Reservation</button>
         </div>
       </div>
@@ -549,20 +483,12 @@
       <div class="ft-brand">
         <div class="nav-logo">Bistro <span>Café</span></div>
         <p class="ft-tag">Where tropical luxury meets culinary artistry.<br>Making every moment extraordinary since 2012.</p>
-        <div class="ft-soc">
-          <a href="#" class="soc-btn" aria-label="Instagram">📸</a>
-          <a href="#" class="soc-btn" aria-label="Facebook">f</a>
-          <a href="#" class="soc-btn" aria-label="TikTok">♪</a>
-          <a href="#" class="soc-btn" aria-label="Yelp">★</a>
-        </div>
       </div>
-      <div class="ft-col"><h5>Navigate</h5><ul><li><a href="#about">About Us</a></li><li><a href="#menu">Our Menu</a></li><li><a href="#experience">Experience</a></li><li><a href="#testimonials">Reviews</a></li><li><a href="#contact">Reservations</a></li></ul></div>
-      <div class="ft-col"><h5>Dining</h5><ul><li><a href="#">Private Events</a></li><li><a href="#">Wine Program</a></li><li><a href="#">Catering</a></li><li><a href="#">Gift Cards</a></li><li><a href="#">Chef's Table</a></li></ul></div>
-      <div class="ft-col"><h5>Hours</h5><div class="ft-hrs"><div class="hr-row"><span>Mon – Thu</span><span>11am – 10pm</span></div><div class="hr-row"><span>Friday</span><span>11am – 11:30pm</span></div><div class="hr-row"><span>Saturday</span><span>11am – 11:30pm</span></div><div class="hr-row"><span>Sunday</span><span>10am – 9pm</span></div></div></div>
+      <div class="ft-col"><h5>Navigate</h5><ul><li><a href="#about">About Us</a></li><li><a href="#menu">Our Menu</a></li><li><a href="#contact">Reservations</a></li></ul></div>
+      <div class="ft-col"><h5>Hours</h5><div class="ft-hrs"><div class="hr-row"><span>Mon – Thu</span><span>11am – 10pm</span></div><div class="hr-row"><span>Fri - Sat</span><span>11am – 11:30pm</span></div><div class="hr-row"><span>Sunday</span><span>10am – 9pm</span></div></div></div>
     </div>
     <div class="ft-bot">
       <div class="ft-copy">© 2025 Bistro Café. All rights reserved. Miami, FL 33132.</div>
-      <div class="ft-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Accessibility</a></div>
     </div>
   </footer>
 
@@ -632,16 +558,6 @@
       b.addEventListener('mouseleave',()=>{ b.style.transform='translate(0,0)'; b.style.transition='transform .5s ease,box-shadow .3s'; });
       b.addEventListener('mouseenter',()=>{ b.style.transition='box-shadow .3s'; });
     });
-
-    /* CAROUSEL */
-    let ci=0;
-    const ct=document.getElementById('carTrack'), cards=ct.querySelectorAll('.t-card'), dotsW=document.getElementById('carDots');
-    const vis=()=>window.innerWidth<768?1:3, maxI=()=>Math.max(0,cards.length-vis());
-    function buildDots(){ dotsW.innerHTML=''; for(let i=0;i<=maxI();i++){ const d=document.createElement('div'); d.className='dot'+(i===ci?' act':''); d.onclick=()=>{ ci=i; updCar(); }; dotsW.appendChild(d); } }
-    function updCar(){ const w=cards[0].getBoundingClientRect().width+24; ct.style.transform=`translateX(-${ci*w}px)`; dotsW.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('act',i===ci)); }
-    function slideCar(d){ ci=Math.max(0,Math.min(ci+d,maxI())); updCar(); }
-    buildDots(); window.addEventListener('resize',()=>{ buildDots(); updCar(); });
-    setInterval(()=>{ ci=ci>=maxI()?0:ci+1; updCar(); },5000);
 
     /* ADD TO ORDER */
     function addOrder(btn){ const t=btn.closest('.mcard').querySelector('.cttl').textContent; btn.textContent='✓'; btn.style.background='var(--gold)'; btn.style.color='var(--emerald)'; setTimeout(()=>{ btn.textContent='+'; btn.style.background=''; btn.style.color=''; },1500); showToast('🍽 "'+t+'" added to your order'); }
